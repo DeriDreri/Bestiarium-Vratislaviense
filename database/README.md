@@ -2,6 +2,8 @@
 
 Serwer bazy danych to PostgreSQL v.16, która została umieszczona w kontenerze Dockera w środowisku Alpine Linux. 
 
+W środowisku hostowanego serwera dostępne jest ograniczona liczba portów dla serwera, więc na potrzeby zewnętrznego dostępu do bazy danych, wybrano port `20960` dla serwera PostgreSQL. Może to zostać zmienione w przyszłości, gdy zarządzaniem bazą danych będzie zajmować się API. 
+
 Wymagania systemowe:
 - Docker Engine 
 - pqsl
