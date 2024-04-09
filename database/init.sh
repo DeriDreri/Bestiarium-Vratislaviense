@@ -8,7 +8,7 @@ PG_PORT=20960 # Required for the hosted server
 
 docker pull ${POSTGRES_IMAGE} 
 docker run --name=postgres-bestiarium \
-           --mount source=posrgres_data,target=/var/lib/postgreqsl/data \ # TODO Should work, it doesn't - needs fixint!
+           --mount source=posrgres_data,target=/var/lib/postgreqsl/data \
            -p ${PG_PORT}:5432 \
            -e POSTGRES_DB=bestiarium \
            -e POSTGRES_USER=${USERNAME} \
