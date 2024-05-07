@@ -11,6 +11,8 @@ const CreaturesList = ({isMapView, creatures}) => {
         <Creature isMapView={true} name={creature.name} location={creature.location} historiesAmount={creature.historiesAmount} />
         ))
       }
+      <div style={{height:10+"em"}}>
+      </div>
     </div>
   );
 }
