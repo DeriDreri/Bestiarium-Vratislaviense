@@ -1,0 +1,60 @@
+.Unlock {
+  text-align: center;
+  background-color: #282c34;
+  height: 100vh;
+}
+
+.Unlock form {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 20px;
+  margin-bottom: auto;
+}
+
+.Unlock h1 {
+  color: white;
+  font-size: 6vh;
+}
+
+.Unlock input {
+  font-size: 4vh;
+  text-align:center;
+  height: 6vh;
+  width: 60vh;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 30px;
+}
+
+.Unlock button {
+  width: 60vh;
+  margin-top: 3vh;
+  color: black;
+  font-size: 3vh;
+  font-weight: bold;
+  background-color: red;
+  border: 10px solid;
+  border-width: 8px;
+  border-color: black;
+  height: 7vh;
+  border-radius: 12px;
+}
+
+.Unlock button:hover {
+  color: white;
+}
+
+.Unlock-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #303030;
+}
+
+.Unlock-link {
+  color: #61dafb;
+}
