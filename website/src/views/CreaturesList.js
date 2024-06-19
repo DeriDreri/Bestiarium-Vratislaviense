@@ -7,8 +7,8 @@ const CreaturesList = ({isMapView, creatures}) => {
         <button>Szukaj</button>
       </form>
       {
-        creatures.map(creature => (
-        <Creature isMapView={true} name={creature.name} location={creature.location} historiesAmount={creature.historiesAmount} />
+        creatures.creatures.map(creature => (
+        <Creature isMapView={isMapView} name={creature.name} location={creature.location.lat + ',' + creature.location.lon} historiesAmount={creature.storiesAmount} />
         ))
       }
       <div style={{height:10+"em"}}>

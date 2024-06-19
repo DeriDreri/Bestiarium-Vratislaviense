@@ -1,75 +1,16 @@
 import CreaturesList from './CreaturesList.js'
 import NavBar from './NavBar.js'
 import './Stories.css'
+import useFetch from '../controler/useFetch.js'
 
 function Stories() {
-  let creaturesList = [
-    {
-      name: "Test1",
-      location: "TestLocation",
-      historiesAmount: "1"
-    },
-    {
-      name: "Test2",
-      location: "TestLocation",
-      historiesAmount: "2"
-    },
-    {
-      name: "Test1",
-      location: "TestLocation",
-      historiesAmount: "1"
-    },
-    {
-      name: "Test1",
-      location: "TestLocation",
-      historiesAmount: "1"
-    },
-    {
-      name: "Test2",
-      location: "TestLocation",
-      historiesAmount: "2"
-    },
-    {
-      name: "Test1",
-      location: "TestLocation",
-      historiesAmount: "1"
-    },
-    {
-      name: "Test1",
-      location: "TestLocation",
-      historiesAmount: "1"
-    },
-    {
-      name: "Test2",
-      location: "TestLocation",
-      historiesAmount: "2"
-    },
-    {
-      name: "Test1",
-      location: "TestLocation",
-      historiesAmount: "1"
-    },
-    {
-      name: "Test1",
-      location: "TestLocation",
-      historiesAmount: "1"
-    },
-    {
-      name: "Test2",
-      location: "TestLocation",
-      historiesAmount: "2"
-    },
-    {
-      name: "Test1",
-      location: "TestLocation",
-      historiesAmount: "1"
-    }
-  ]
+
+  const { error, isPending, data: creaturesList } = useFetch('http://localhost:8000/creatures')
 
   return (
     <div className="Stories">
-      <NavBar isLogged={true} />
-      <CreaturesList isMapView={true} creatures={creaturesList}/>
+      <NavBar isLogged={false} />
+      {!isPending && <CreaturesList isMapView={false} creatures={creaturesList}/>}
     </div>
   );
 }
